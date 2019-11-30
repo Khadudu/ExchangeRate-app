@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
-import { Button } from "reactstrap";
+import "./index.css";
 
 class App extends Component {
   constructor(props) {
@@ -30,6 +30,7 @@ class App extends Component {
     return (
       <div>
         <div className>
+          <h1 class="title">Exchange Rate App</h1>
           <select
             onChange={this.makeSelection}
             name="base"
