@@ -28,9 +28,11 @@ class App extends Component {
   }
   render() {
     return (
-      <div>
-        <div className>
-          <h1 class="title">Exchange Rate App</h1>
+      <div id="container">
+        <div>
+          <h1>Currency Converter</h1>
+        </div>
+        <div class="content">
           <select
             onChange={this.makeSelection}
             name="base"
@@ -42,7 +44,11 @@ class App extends Component {
               </option>
             ))}
           </select>
-          <input value={this.state.value} onChange={this.changevalue} />
+          <input
+            size="30"
+            value={this.state.value}
+            onChange={this.changevalue}
+          />
         </div>
         <div>
           <select
@@ -57,6 +63,7 @@ class App extends Component {
             ))}
           </select>
           <input
+            size="30"
             disabled={true}
             value={
               this.state.converted === null
@@ -64,6 +71,9 @@ class App extends Component {
                 : this.state.converted
             }
           />
+        </div>
+        <div class="footer">
+          <p class="disclaimer">Currency converter @ 2019</p>
         </div>
       </div>
     );
